@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3eee4;
+  --foreground: #1c1917;
+  --card: #fffaf2;
+  --card-foreground: #1c1917;
+  --primary: #0f5c4c;
+  --primary-foreground: #f7f4ee;
+  --secondary: #e8dfd0;
+  --secondary-foreground: #3f3a34;
+  --muted: #ebe3d6;
+  --muted-foreground: #6b6358;
+  --accent: #f0e4cc;
+  --accent-foreground: #1c1917;
+  --destructive: #b42318;
+  --destructive-foreground: #fff7ed;
+  --border: #ddd2c0;
+  --input: #d8ccb8;
+  --ring: #0f5c4c;
+}
+
+.dark {
+  --background: #161310;
+  --foreground: #f5efe6;
+  --card: #211c18;
+  --card-foreground: #f5efe6;
+  --primary: #5dbea6;
+  --primary-foreground: #10231e;
+  --secondary: #2c261f;
+  --secondary-foreground: #e8dfd0;
+  --muted: #2a241e;
+  --muted-foreground: #b3a899;
+  --accent: #3a3127;
+  --accent-foreground: #f5efe6;
+  --destructive: #f97066;
+  --destructive-foreground: #1c1917;
+  --border: #3a3229;
+  --input: #3a3229;
+  --ring: #5dbea6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 1.4s ease-in-out infinite;
 }
