@@ -53,6 +53,14 @@
 
 ***
 
+## Result 5
+***
+
+![AI Engineering Exercise 6](/app/images-output/result5.png)
+
+
+***
+
 ## Code
 
 ---
